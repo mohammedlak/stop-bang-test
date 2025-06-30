@@ -3,25 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>اختبار STOP-BANG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       direction: rtl;
-      text-align: right;
-      background-color: #f2f2f2;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #ffffff;
       padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #1976d2;
+    }
+    .header h1 {
+      font-size: 20px;
+      margin: 5px 0;
+      color: #333;
     }
     .container {
-      max-width: 600px;
-      margin: auto;
+      max-width: 700px;
+      margin: 30px auto;
       background: white;
       padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
+      border-radius: 12px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
     h2 {
       text-align: center;
-      color: #333;
+      color: #1976d2;
+      margin-bottom: 30px;
     }
     .question {
       margin-bottom: 20px;
@@ -29,66 +42,90 @@
     .result {
       margin-top: 30px;
       padding: 20px;
-      background-color: #e8f5e9;
-      border: 1px solid #c8e6c9;
+      background-color: #e3f2fd;
+      border: 1px solid #bbdefb;
       border-radius: 8px;
       display: none;
+      color: #0d47a1;
+      font-weight: bold;
     }
     button {
-      padding: 10px 20px;
-      font-size: 16px;
+      padding: 12px 24px;
+      font-size: 18px;
       background-color: #1976d2;
       color: white;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
+      display: block;
+      margin: 30px auto 0;
     }
     button:hover {
       background-color: #1565c0;
     }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .container {
+        margin: 10px;
+        padding: 20px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="header">
+    <h1>المملكة المغربية</h1>
+    <h1>وزارة الصحة والحماية الاجتماعية</h1>
+    <h1>المركز الاستشفائي الجامعي محمد السادس بوجدة</h1>
+  </div>
+
   <div class="container">
     <h2>اختبار STOP-BANG</h2>
     <form id="stopBangForm">
       <div class="question">
-        <label>1. هل تشخر بصوت مرتفع؟</label><br>
+        <label>1. هل تشخر بصوت مرتفع؟</label>
         <input type="radio" name="q1" value="1" required> نعم
         <input type="radio" name="q1" value="0"> لا
       </div>
       <div class="question">
-        <label>2. هل تشعر بالنعاس أو التعب خلال النهار؟</label><br>
+        <label>2. هل تشعر بالنعاس أو التعب خلال النهار؟</label>
         <input type="radio" name="q2" value="1" required> نعم
         <input type="radio" name="q2" value="0"> لا
       </div>
       <div class="question">
-        <label>3. هل لاحظ أحد أنك تتوقف عن التنفس أثناء النوم؟</label><br>
+        <label>3. هل لاحظ أحد أنك تتوقف عن التنفس أثناء النوم؟</label>
         <input type="radio" name="q3" value="1" required> نعم
         <input type="radio" name="q3" value="0"> لا
       </div>
       <div class="question">
-        <label>4. هل تعاني من ارتفاع ضغط الدم؟</label><br>
+        <label>4. هل تعاني من ارتفاع ضغط الدم؟</label>
         <input type="radio" name="q4" value="1" required> نعم
         <input type="radio" name="q4" value="0"> لا
       </div>
       <div class="question">
-        <label>5. هل وزنك زائد (BMI &gt; 35)؟</label><br>
+        <label>5. هل وزنك زائد (BMI &gt; 35)؟</label>
         <input type="radio" name="q5" value="1" required> نعم
         <input type="radio" name="q5" value="0"> لا
       </div>
       <div class="question">
-        <label>6. هل عمرك أكثر من 50 سنة؟</label><br>
+        <label>6. هل عمرك أكثر من 50 سنة؟</label>
         <input type="radio" name="q6" value="1" required> نعم
         <input type="radio" name="q6" value="0"> لا
       </div>
       <div class="question">
-        <label>7. هل محيط عنقك أكبر من 40 سم؟</label><br>
+        <label>7. هل محيط عنقك أكبر من 40 سم؟</label>
         <input type="radio" name="q7" value="1" required> نعم
         <input type="radio" name="q7" value="0"> لا
       </div>
       <div class="question">
-        <label>8. هل أنت من الذكور؟</label><br>
+        <label>8. هل أنت من الذكور؟</label>
         <input type="radio" name="q8" value="1" required> نعم
         <input type="radio" name="q8" value="0"> لا
       </div>
